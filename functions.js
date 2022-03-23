@@ -72,8 +72,9 @@ function booksByColor(books) {
  ****************************************************************/
 function titlesByAuthorName(authorName, authors, books) {
   // Your code goes here
+  //return authors.books.filter((author) => );
 }
-console.log(titlesByAuthorName("George R.R. Martin", authors, books));
+//console.log(titlesByAuthorName("George R.R. Martin", authors, books));
 
 /**************************************************************
  * mostProlificAuthor(authors):
