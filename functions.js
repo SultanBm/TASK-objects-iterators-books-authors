@@ -38,9 +38,11 @@ console.log(getAuthorByName("J.K. Rowling", authors));
  ****************************************************************/
 function bookCountsByAuthor(authors) {
   // Your code goes here
-  let arr = [];
-  authors.forEach((author) => arr.push([author.name, author.books.length]));
-  return arr;
+  let bookcount = [];
+  authors.forEach((author) =>
+    bookcount.push({ author: author.name, bookCount: author.books.length })
+  );
+  return bookcount;
 }
 console.log(bookCountsByAuthor(authors));
 
@@ -52,15 +54,15 @@ console.log(bookCountsByAuthor(authors));
  *    { <COLOR>: [<BOOK_TITLES>] }
  ****************************************************************/
 function booksByColor(books) {
-  let colors = {};
-  // colors.push(
-  //   books.forEach((book) => {
-  //     books.title, books.color;
-  //   })
-  // );
+  const colors = {};
+
+  books.forEach((book) => Object.assign(colors, { [book.color]: [] }));
+
+  books.forEach((book) => Object.assign(colors, { [book.color]: [] }));
+
   return colors;
 }
-//console.log(booksByColor(books));
+console.log(booksByColor(books));
 
 /**************************************************************
  * titlesByAuthorName(authorName, authors, books):
